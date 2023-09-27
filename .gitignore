@@ -1,0 +1,13 @@
+# Ignore compiled bytecode and class files
+*.class
+
+# Ignore directorie(s)
+/target/
+
+# Ignore IntelliJ IDEA-specific files and directories
+.idea/
+*.iml
+
+# Ignore this file
+.DS_Store
+
