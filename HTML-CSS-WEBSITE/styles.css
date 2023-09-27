@@ -597,8 +597,17 @@
 .image-container img {
   max-width: 100%; /* Ensure the image doesn't exceed the container width */
   max-height: 100%; /* Ensure the image doesn't exceed the container height */
-  border-radius: 20%;
+  border-radius: 50%;
 }
+
+/* Add this CSS for the circular image */
+.circular-image {
+  border-radius: 50%; /* Make the image circular */
+  height: 400px; /* Set the desired height for the circular image */
+  width: 400px; /* Set the desired width for the circular image */
+  object-fit: cover; /* Ensure the image covers the circular container */
+}
+
 
 /* Add this CSS to center the text */
 .text-container {
