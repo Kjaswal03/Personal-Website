@@ -14,19 +14,19 @@
 <!-- Navbar Section -->
 <nav class="navbar">
   <div class="navbar__container">
-    <a href="/" id="navbar__logo"><i class ="fas fa-user-tie"></i>Kashev Jaswal</a>
+    <a href="https://www.linkedin.com/in/kashevjaswal/" id="navbar__logo"><i class ="fas fa-user-tie"></i>Kashev Jaswal</a>
     <div class="navbar__toggle" id="mobile-menu">
       <span class="bar"></span> <span class="bar"></span>
       <span class="bar"></span>
     </div>
     <ul class="navbar__menu">
       <li class="navbar__item">
-        <a href="ME.html" class="navbar__links">About Me</a>
-      </li>
-      <li class="navbar__item">
         <a href="#Projects" class="navbar__links">Projects</a>
       </li>
-      <li class="navbar__btn"><a href="#Resume" class="button">Resume</a></li>
+      <li class="navbar__item">
+        <a href="#Resume" class="navbar__links">Resume</a>
+      </li>
+      <li class="navbar__btn"><a href="#footer" class="button">Reach Me</a></li>
     </ul>
   </div>
 </nav>
@@ -71,7 +71,7 @@
 </div>
 
 <!-- Footer Section -->
-<div class="footer__container">
+<div id="footer" class="footer__container">
   <div class="footer__links">
     <div class="footer__link--wrapper">
       <div class="footer__link--items">
@@ -140,6 +140,24 @@
   });
 </script>
 
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth' // This enables smooth scrolling
+        });
+      }
+    });
+  });
+</script>
 
 
 <script src="app.js"></script>
